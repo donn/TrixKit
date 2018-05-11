@@ -16,6 +16,10 @@ extension Matrix {
         return inverted!
     }
     
+    public var t: Matrix {
+        return transposed
+    }
+    
     public var dt: Real {
         return determinant!
     }

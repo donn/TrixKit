@@ -76,4 +76,24 @@ public class Matrix<Real: FloatingPoint>: CustomStringConvertible {
         
         return Matrix(matrix)!
     }
+    
+    public static func **(right: Matrix, left: Int) -> Matrix? {
+        var exponent = left
+        var matrix: Matrix? = right
+        if (exponent < 0) {
+            exponent = -exponent
+            matrix = right.inverted
+        }
+        guard let final = matrix else {
+            return nil
+        }
+        if !right.squareMatrix {
+            return nil
+        }
+        return (1..<left).reduce(final) {
+            (final: Matrix, next: Int) in
+            return final * right
+        }
+        
+    }
 }
