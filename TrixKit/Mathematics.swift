@@ -3,6 +3,7 @@ import Foundation
 prefix operator √
 
 infix operator **: BitwiseShiftPrecedence
+infix operator &**: BitwiseShiftPrecedence
 
 public prefix func √<Real: FloatingPoint>(input: Real) -> Real {
     return input.squareRoot()

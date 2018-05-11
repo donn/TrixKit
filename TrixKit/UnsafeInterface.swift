@@ -1,9 +1,5 @@
 extension Matrix {
     
-    public static func *(left: Matrix, right: Matrix) -> Matrix {
-        return (left &* right)!
-    }
-    
     public var l: Matrix {
         return lowerTriangular!
     }
@@ -19,8 +15,30 @@ extension Matrix {
     public var t: Matrix {
         return transposed
     }
+
+    public var re: Matrix {
+        return rowEchelon
+    }
     
     public var dt: Real {
         return determinant!
+    }
+
+    // Multiplication
+    
+    public static func *(left: Matrix, right: Matrix) -> Matrix {
+        return (left &* right)!
+    }
+
+    public static func **(left: Matrix, right: Int) -> Matrix {
+        return (left &** right)!
+    }
+
+    public static func +(left: Matrix, right: Matrix) -> Matrix {
+        return (left &+ right)!
+    }
+
+    public static func -(left: Matrix, right: Matrix) -> Matrix {
+        return (left &- right)!
     }
 }

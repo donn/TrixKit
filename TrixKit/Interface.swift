@@ -154,6 +154,32 @@ extension Matrix {
         return Matrix(result)!
     }
     
+    public static func &**(right: Matrix, left: Int) -> Matrix? {
+        if !right.squareMatrix {
+            return nil
+        }
+
+        var exponent = left
+
+        var matrix: Matrix? = right
+
+        if (exponent < 0) {
+            exponent = -exponent
+            matrix = right.inverted
+        }
+
+        guard let final = matrix else {
+            return nil
+        }
+        
+        return (1..<left).reduce(final) {
+            (final: Matrix, next: Int) in
+            return final * right
+        }
+        
+    }
+    
+    // Linear Operations
     public static func ==(left: Matrix, right: Matrix) -> Bool {
         if left.rows.count != right.rows.count && left.columns.count != right.columns.count {
             return false
@@ -174,6 +200,7 @@ extension Matrix {
         return !(left == right)
     }
     
+    // Scalar Operations
     public static func *(left: Real, right: Matrix) -> Matrix {
         var result = right.store
         for i in 0..<result.count {
@@ -181,6 +208,38 @@ extension Matrix {
                 result[i][j] *= left
             }
         }
+        return Matrix(result)!
+    }
+
+    public static func &+(left: Matrix, right: Matrix) -> Matrix? {
+        if left.rows.count != right.rows.count && left.columns.count != right.columns.count {
+            return nil
+        }
+
+        var result = right.store
+        
+        for i in 0..<left.rows.count {
+            for j in 0..<left.columns.count {
+                result[i][j] = left[i, j] + right[i, j]
+            }
+        }
+        
+        return Matrix(result)!
+    }
+
+    public static func &-(left: Matrix, right: Matrix) -> Matrix? {
+        if left.rows.count != right.rows.count && left.columns.count != right.columns.count {
+            return nil
+        }
+
+        var result = right.store
+        
+        for i in 0..<left.rows.count {
+            for j in 0..<left.columns.count {
+                result[i][j] = left[i, j] - right[i, j]
+            }
+        }
+        
         return Matrix(result)!
     }
 }
