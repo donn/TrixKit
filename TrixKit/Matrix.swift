@@ -77,6 +77,17 @@ public class Matrix<Real: FloatingPoint>: CustomStringConvertible {
         return Matrix(matrix)!
     }
     
+    public static func flippedIdentity(_ n: Int) -> Matrix {
+        var matrix = [[Real]](repeatElement([Real](repeatElement(Real(0), count: n)), count: n))
+        
+        for diagonal in 0..<n {
+            matrix[diagonal][n - 1 - diagonal] = Real(1)
+        }
+        
+        return Matrix(matrix)!
+        
+    }
+    
     public static func **(right: Matrix, left: Int) -> Matrix? {
         var exponent = left
         var matrix: Matrix? = right

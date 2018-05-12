@@ -183,8 +183,13 @@ extension Matrix {
         }
         return Matrix(result)!
     }
+    
 }
 
 public func identity(_ n: Int) -> Matrix<Double> {
     return Matrix<Double>.identity(n)
+}
+
+public func flippedIdentity(_ n: Int) -> Matrix<Double> {
+    return Matrix<Double>.flippedIdentity(n)
 }
