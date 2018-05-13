@@ -144,7 +144,7 @@ extension Matrix {
             for j in 0..<right.columns.count {
                 var element: Real = Real(0)
                 for k in 0..<n {
-                    element += left[i, k] * right[k, j]
+                    element += left.store[i][k] * right.transposed.store[j][k] //right.store[k][j]
                 }
                 row.append(element)
             }
