@@ -1,9 +1,15 @@
 import Foundation
 
 prefix operator √
+prefix operator ≈
 
 infix operator **: BitwiseShiftPrecedence
 infix operator &**: BitwiseShiftPrecedence
+
+public prefix func ≈<Real: FloatingPoint>(input: Real) -> Real {
+    let magnitude = (input < 0) ? -input : input
+    return (magnitude > Real.ulpOfOne) ? magnitude : Real(0)
+}
 
 public prefix func √<Real: FloatingPoint>(input: Real) -> Real {
     return input.squareRoot()

@@ -17,7 +17,11 @@ public class Matrix<Real: FloatingPoint>: CustomStringConvertible {
     //Calculated Alone
     var _transposed: Matrix?
     
-    public init?(_ array: [[Real]]) {
+    private init(_ array: [[Real]], checked: Bool = true) {
+        self.store = array
+    }
+    
+    convenience public init?(_ array: [[Real]]) {
         let column = array[0].count
         
         for vector in array {
@@ -25,21 +29,23 @@ public class Matrix<Real: FloatingPoint>: CustomStringConvertible {
                 return nil
             }
         }
-        self.store = array
+        
+        self.init(array, checked: true)
     }
     
-    public init?(shape: (rows: Int, columns: Int), array: [Real]) {
+    convenience public init?(shape: (rows: Int, columns: Int), array: [Real]) {
         if array.count != shape.rows * shape.columns {
             return nil
         }
-        self.store = []
+        var store: [[Real]] = []
         for i in 0..<shape.rows {
             var row: [Real] = []
             for j in 0..<shape.columns {
                 row.append(array[i * shape.rows + j])
             }
-            self.store.append(row)
+            store.append(row)
         }
+        self.init(store, checked: true)
     }
     
     public subscript(i: Int, j: Int) -> Real {

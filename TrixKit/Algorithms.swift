@@ -4,14 +4,15 @@ extension Matrix {
         var lower = Matrix.identity(rows.count).store //Elementary ROW operations: only need rows.count
         var inverted = squareMatrix ? Matrix.identity(rows.count).store : nil
         var lu = squareMatrix
+        let minimum = min(rows.count, columns.count)
         
-        columnIteration: for i in 0..<columns.count {
+        columnIteration: for i in 0..<minimum {
             var pivot = i
-            pivotSearch: while upper[i][pivot] == 0 {
+            pivotSearch: while ≈upper[i][pivot] == 0 {
                 for k in i..<rows.count {
-                    if upper[k][pivot] != 0 {
+                    if ≈upper[k][pivot] != 0 {
                         lu = false
-                        upper.swapAt(i, k) // swap(&upper[i], &upper[k]) //If we switch to contiguous storage they'll be more expensive, is it worth it
+                        upper.swapAt(i, k)
                         lower[i][i] -= 1
                         lower[i][k] += 1
                         lower[k][i] += 1
@@ -20,16 +21,15 @@ extension Matrix {
                         break pivotSearch
                     }
                     if k == rows.count - 1 {
-                        if pivot < columns.count - 1 {
-                            pivot = pivot + 1
-                        } else {
-                            continue columnIteration
-                        }
+                        pivot += 1
+                    }
+                    if pivot >= columns.count { //No pivot in this column
+                        continue columnIteration
                     }
                 }
             }
             rowIteration: for k in (i + 1)..<rows.count {
-                if upper[i][pivot] == 0 || upper[k][pivot] == 0 {
+                if ≈upper[k][pivot] == 0 {
                     continue
                 }
                 
