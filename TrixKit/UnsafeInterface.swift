@@ -26,6 +26,10 @@ extension Matrix {
 
     // Multiplication
     
+    public static func *(left: Real, right: Matrix) -> Matrix {
+        return (left &* right)
+    }
+    
     public static func *(left: Matrix, right: Matrix) -> Matrix {
         return (left &* right)!
     }

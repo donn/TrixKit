@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700D7D3E20AF136100D19738 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D7D3D20AF136100D19738 /* Numeric.swift */; };
 		706A778F206FF64500A85E74 /* TrixKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706A7785206FF64500A85E74 /* TrixKit.framework */; };
 		706A7794206FF64500A85E74 /* TrixKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A7793206FF64500A85E74 /* TrixKitTests.swift */; };
 		706A77A0206FF65F00A85E74 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A779F206FF65F00A85E74 /* Matrix.swift */; };
@@ -15,10 +16,7 @@
 		706A77A620700AF100A85E74 /* Procedures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A520700AF100A85E74 /* Procedures.swift */; };
 		706A77A920703CBD00A85E74 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A820703CBD00A85E74 /* Interface.swift */; };
 		709D1D502091352600FD2713 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1D4F2091352600FD2713 /* Mathematics.swift */; };
-		70DF184F207F57D100E97751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF184E207F57D100E97751 /* AppDelegate.swift */; };
-		70DF1851207F57D200E97751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DF1850207F57D200E97751 /* Assets.xcassets */; };
 		70DF185A207F581800E97751 /* TrixKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706A7785206FF64500A85E74 /* TrixKit.framework */; };
-		70DF185C207F58F300E97751 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DF185B207F58F300E97751 /* MainMenu.xib */; };
 		70DF185E207F833C00E97751 /* UnsafeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF185D207F833C00E97751 /* UnsafeInterface.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		700D7D3D20AF136100D19738 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
 		706A7785206FF64500A85E74 /* TrixKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrixKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		706A7789206FF64500A85E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706A778E206FF64500A85E74 /* TrixKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrixKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,11 +45,6 @@
 		709D1D4F2091352600FD2713 /* Mathematics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
 		70DF1846207F55DD00E97751 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		70DF184C207F57D000E97751 /* TrixKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrixKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		70DF184E207F57D100E97751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70DF1850207F57D200E97751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70DF1855207F57D200E97751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70DF1856207F57D200E97751 /* TrixKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrixKitDemo.entitlements; sourceTree = "<group>"; };
-		70DF185B207F58F300E97751 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		70DF185D207F833C00E97751 /* UnsafeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafeInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +80,6 @@
 			children = (
 				706A7787206FF64500A85E74 /* TrixKit */,
 				706A7792206FF64500A85E74 /* TrixKitTests */,
-				70DF184D207F57D100E97751 /* TrixKitDemo */,
 				706A7786206FF64500A85E74 /* Products */,
 				70A4CC04207050E900B25B96 /* Frameworks */,
 			);
@@ -113,6 +106,7 @@
 				706A77A820703CBD00A85E74 /* Interface.swift */,
 				70DF185D207F833C00E97751 /* UnsafeInterface.swift */,
 				709D1D4F2091352600FD2713 /* Mathematics.swift */,
+				700D7D3D20AF136100D19738 /* Numeric.swift */,
 			);
 			path = TrixKit;
 			sourceTree = "<group>";
@@ -132,18 +126,6 @@
 				70DF1846207F55DD00E97751 /* AppKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		70DF184D207F57D100E97751 /* TrixKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				70DF185B207F58F300E97751 /* MainMenu.xib */,
-				70DF184E207F57D100E97751 /* AppDelegate.swift */,
-				70DF1850207F57D200E97751 /* Assets.xcassets */,
-				70DF1855207F57D200E97751 /* Info.plist */,
-				70DF1856207F57D200E97751 /* TrixKitDemo.entitlements */,
-			);
-			path = TrixKitDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70DF1851207F57D200E97751 /* Assets.xcassets in Resources */,
-				70DF185C207F58F300E97751 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +271,7 @@
 				706A77A320700ADC00A85E74 /* Array.swift in Sources */,
 				706A77A420700ADC00A85E74 /* Algorithms.swift in Sources */,
 				706A77A620700AF100A85E74 /* Procedures.swift in Sources */,
+				700D7D3E20AF136100D19738 /* Numeric.swift in Sources */,
 				709D1D502091352600FD2713 /* Mathematics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70DF184F207F57D100E97751 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

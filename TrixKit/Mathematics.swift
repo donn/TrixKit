@@ -3,12 +3,18 @@ import Foundation
 prefix operator √
 prefix operator ≈
 
+postfix operator %
+
 infix operator **: BitwiseShiftPrecedence
 infix operator &**: BitwiseShiftPrecedence
 
 public prefix func ≈<Real: FloatingPoint>(input: Real) -> Real {
     let magnitude = (input < 0) ? -input : input
     return (magnitude > Real.ulpOfOne) ? magnitude : Real(0)
+}
+
+public postfix func %<Real: FloatingPoint>(input: Real) -> Real {
+    return input / Real(100)
 }
 
 public prefix func √<Real: FloatingPoint>(input: Real) -> Real {
@@ -27,16 +33,10 @@ public func **(left: Int, right: Int) -> Int {
     return Int(Foundation.pow(Double(left), Double(right)))
 }
 
-
-public struct Complex<Real: FloatingPoint> {
-    var real: Real = 0
-    var imaginary: Real = 0
-}
-
-public func quadraticSolution<Real: FloatingPoint>(a: Real, b: Real, c: Real) -> (s1: Complex<Real>, s2: Complex<Real>) {
+public func quadraticSolution<Real: FloatingPoint>(a: Real, b: Real, c: Real) -> (s1: (real: Real, imaginary: Real), s2: (real: Real, imaginary: Real)) {
     let discriminant = b * b - 4 * a * c
-    var s1 = Complex<Real>()
-    var s2 = Complex<Real>()
+    var s1: (real: Real, imaginary: Real) = (real: 0, imaginary: 0)
+    var s2: (real: Real, imaginary: Real) = (real: 0, imaginary: 0)
     s1.real = -b / (2 * a)
     s2.real = s1.real
     if (discriminant < 0) {

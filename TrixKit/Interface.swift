@@ -201,7 +201,7 @@ extension Matrix {
     }
     
     // Scalar Operations
-    public static func *(left: Real, right: Matrix) -> Matrix {
+    public static func &*(left: Real, right: Matrix) -> Matrix {
         var result = right.store
         for i in 0..<result.count {
             for j in 0..<result[i].count {
