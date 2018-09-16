@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		700D7D3E20AF136100D19738 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D7D3D20AF136100D19738 /* Numeric.swift */; };
 		706A778F206FF64500A85E74 /* TrixKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706A7785206FF64500A85E74 /* TrixKit.framework */; };
 		706A7794206FF64500A85E74 /* TrixKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A7793206FF64500A85E74 /* TrixKitTests.swift */; };
 		706A77A0206FF65F00A85E74 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A779F206FF65F00A85E74 /* Matrix.swift */; };
@@ -16,7 +15,6 @@
 		706A77A620700AF100A85E74 /* Procedures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A520700AF100A85E74 /* Procedures.swift */; };
 		706A77A920703CBD00A85E74 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A820703CBD00A85E74 /* Interface.swift */; };
 		709D1D502091352600FD2713 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1D4F2091352600FD2713 /* Mathematics.swift */; };
-		70DF185A207F581800E97751 /* TrixKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706A7785206FF64500A85E74 /* TrixKit.framework */; };
 		70DF185E207F833C00E97751 /* UnsafeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF185D207F833C00E97751 /* UnsafeInterface.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		700D7D3D20AF136100D19738 /* Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		7035FB8B213FEFAD00FABDAC /* libswiftCore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCore.tbd; path = System/Library/PrivateFrameworks/Swift/libswiftCore.tbd; sourceTree = SDKROOT; };
 		706A7785206FF64500A85E74 /* TrixKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrixKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		706A7789206FF64500A85E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706A778E206FF64500A85E74 /* TrixKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrixKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +42,6 @@
 		706A77A820703CBD00A85E74 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		709D1D4F2091352600FD2713 /* Mathematics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
 		70DF1846207F55DD00E97751 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		70DF184C207F57D000E97751 /* TrixKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrixKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DF185D207F833C00E97751 /* UnsafeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafeInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,14 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				706A778F206FF64500A85E74 /* TrixKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70DF1849207F57D000E97751 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70DF185A207F581800E97751 /* TrixKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +79,6 @@
 			children = (
 				706A7785206FF64500A85E74 /* TrixKit.framework */,
 				706A778E206FF64500A85E74 /* TrixKitTests.xctest */,
-				70DF184C207F57D000E97751 /* TrixKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +94,6 @@
 				706A77A820703CBD00A85E74 /* Interface.swift */,
 				70DF185D207F833C00E97751 /* UnsafeInterface.swift */,
 				709D1D4F2091352600FD2713 /* Mathematics.swift */,
-				700D7D3D20AF136100D19738 /* Numeric.swift */,
 			);
 			path = TrixKit;
 			sourceTree = "<group>";
@@ -123,6 +110,7 @@
 		70A4CC04207050E900B25B96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7035FB8B213FEFAD00FABDAC /* libswiftCore.tbd */,
 				70DF1846207F55DD00E97751 /* AppKit.framework */,
 			);
 			name = Frameworks;
@@ -177,30 +165,13 @@
 			productReference = 706A778E206FF64500A85E74 /* TrixKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		70DF184B207F57D000E97751 /* TrixKitDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 70DF1857207F57D200E97751 /* Build configuration list for PBXNativeTarget "TrixKitDemo" */;
-			buildPhases = (
-				70DF1848207F57D000E97751 /* Sources */,
-				70DF1849207F57D000E97751 /* Frameworks */,
-				70DF184A207F57D000E97751 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TrixKitDemo;
-			productName = TrixKitDemo;
-			productReference = 70DF184C207F57D000E97751 /* TrixKitDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		706A777C206FF64500A85E74 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Donn;
 				TargetAttributes = {
@@ -209,9 +180,6 @@
 						LastSwiftMigration = 0930;
 					};
 					706A778D206FF64500A85E74 = {
-						CreatedOnToolsVersion = 9.3;
-					};
-					70DF184B207F57D000E97751 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -231,7 +199,6 @@
 			targets = (
 				706A7784206FF64500A85E74 /* TrixKit */,
 				706A778D206FF64500A85E74 /* TrixKitTests */,
-				70DF184B207F57D000E97751 /* TrixKitDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -251,13 +218,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70DF184A207F57D000E97751 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -271,7 +231,6 @@
 				706A77A320700ADC00A85E74 /* Array.swift in Sources */,
 				706A77A420700ADC00A85E74 /* Algorithms.swift in Sources */,
 				706A77A620700AF100A85E74 /* Procedures.swift in Sources */,
-				700D7D3E20AF136100D19738 /* Numeric.swift in Sources */,
 				709D1D502091352600FD2713 /* Mathematics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,13 +240,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				706A7794206FF64500A85E74 /* TrixKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70DF1848207F57D000E97751 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,42 +462,6 @@
 			};
 			name = Release;
 		};
-		70DF1858207F57D200E97751 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TrixKitDemo/TrixKitDemo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TrixKitDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = donn.TrixKitDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		70DF1859207F57D200E97751 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TrixKitDemo/TrixKitDemo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TrixKitDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = donn.TrixKitDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,15 +488,6 @@
 			buildConfigurations = (
 				706A779D206FF64500A85E74 /* Debug */,
 				706A779E206FF64500A85E74 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		70DF1857207F57D200E97751 /* Build configuration list for PBXNativeTarget "TrixKitDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				70DF1858207F57D200E97751 /* Debug */,
-				70DF1859207F57D200E97751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

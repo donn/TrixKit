@@ -8,6 +8,24 @@ postfix operator %
 infix operator **: BitwiseShiftPrecedence
 infix operator &**: BitwiseShiftPrecedence
 
+extension Int {
+    public var u: UInt {
+        return UInt(bitPattern: self)
+    }
+    public var f: Float {
+        return Float(self)
+    }
+}
+
+extension Double {
+    static public var e: Double {
+        return M_E
+    }
+    static public var π: Double {
+        return Double.pi
+    }
+}
+
 public prefix func ≈<Real: FloatingPoint>(input: Real) -> Real {
     let magnitude = (input < 0) ? -input : input
     return (magnitude > Real.ulpOfOne) ? magnitude : Real(0)
