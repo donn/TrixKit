@@ -51,4 +51,16 @@ extension Array where Iterator.Element == Double {
     public func angle(to right: [Double]) -> Double {
         return acos(abs(self.dot(right)) / (self.norm * right.norm))
     }
+    
+    public func discreteFourierTransform() -> (real: [Double], imaginary: [Double]){
+        return DSP.discreteFourierTransform(samples: self)
+    }
+    
+    public func fastFourierTransform() -> (real: [Double], imaginary: [Double]) {
+        return DSP.fastFourierTransform(samples: self)
+    }
+    
+    public func windowedFastFourierTransform(with window: (_ n: Int, _ N: Int) -> (Double)) -> (real: [Double], imaginary: [Double]) {
+        return DSP.windowedFastFourierTransform(samples: self, with: window)
+    }
 }

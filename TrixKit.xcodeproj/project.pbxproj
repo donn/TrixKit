@@ -14,6 +14,7 @@
 		706A77A420700ADC00A85E74 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A220700ADC00A85E74 /* Algorithms.swift */; };
 		706A77A620700AF100A85E74 /* Procedures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A520700AF100A85E74 /* Procedures.swift */; };
 		706A77A920703CBD00A85E74 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A77A820703CBD00A85E74 /* Interface.swift */; };
+		709A74C620EFAA410046F2FA /* DSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709A74C520EFAA410046F2FA /* DSP.swift */; };
 		709D1D502091352600FD2713 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D1D4F2091352600FD2713 /* Mathematics.swift */; };
 		70DF185E207F833C00E97751 /* UnsafeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF185D207F833C00E97751 /* UnsafeInterface.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		706A77A220700ADC00A85E74 /* Algorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 		706A77A520700AF100A85E74 /* Procedures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Procedures.swift; sourceTree = "<group>"; };
 		706A77A820703CBD00A85E74 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		709A74C520EFAA410046F2FA /* DSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSP.swift; sourceTree = "<group>"; };
 		709D1D4F2091352600FD2713 /* Mathematics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
 		70DF1846207F55DD00E97751 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		70DF185D207F833C00E97751 /* UnsafeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsafeInterface.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				706A77A0206FF65F00A85E74 /* Matrix.swift in Sources */,
 				70DF185E207F833C00E97751 /* UnsafeInterface.swift in Sources */,
 				706A77A920703CBD00A85E74 /* Interface.swift in Sources */,
+				709A74C620EFAA410046F2FA /* DSP.swift in Sources */,
 				706A77A320700ADC00A85E74 /* Array.swift in Sources */,
 				706A77A420700ADC00A85E74 /* Algorithms.swift in Sources */,
 				706A77A620700AF100A85E74 /* Procedures.swift in Sources */,
