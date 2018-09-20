@@ -7,6 +7,7 @@ postfix operator %
 
 infix operator **: BitwiseShiftPrecedence
 infix operator &**: BitwiseShiftPrecedence
+infix operator ∑: BitwiseShiftPrecedence
 
 extension Int {
     public var u: UInt {
@@ -47,8 +48,12 @@ public func **(left: Float, right: Float) -> Float {
     return Foundation.pow(left, right)
 }
 
-public func **(left: Int, right: Int) -> Int {
-    return Int(Foundation.pow(Double(left), Double(right)))
+public func ∑<Number: Numeric>(left: (Int)->(Number), right: CountableClosedRange<Int>) -> Number {
+    var sum = Number(exactly: 0)!
+    for i in right {
+        sum += left(i)
+    }
+    return sum;
 }
 
 public func quadraticSolution<Real: FloatingPoint>(a: Real, b: Real, c: Real) -> (s1: (real: Real, imaginary: Real), s2: (real: Real, imaginary: Real)) {
