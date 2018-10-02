@@ -48,14 +48,6 @@ public func **(left: Float, right: Float) -> Float {
     return Foundation.pow(left, right)
 }
 
-public func ∑<Number: Numeric>(left: (Int)->(Number), right: CountableClosedRange<Int>) -> Number {
-    var sum = Number(exactly: 0)!
-    for i in right {
-        sum += left(i)
-    }
-    return sum;
-}
-
 public func quadraticSolution<Real: FloatingPoint>(a: Real, b: Real, c: Real) -> (s1: (real: Real, imaginary: Real), s2: (real: Real, imaginary: Real)) {
     let discriminant = b * b - 4 * a * c
     var s1: (real: Real, imaginary: Real) = (real: 0, imaginary: 0)
