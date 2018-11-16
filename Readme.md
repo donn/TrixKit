@@ -1,7 +1,8 @@
 # TrixKit
-A matrix library written in Swift. I wrote this as both a project for a linear algebra course and it just happens to be a (very) competent terminal calculator.
+A matrix library written in Swift. I wrote this as a project for a linear algebra course and it just happens to be a (very) competent terminal calculator.
 
 TrixKit tries to levarage two modes of operation, **safe** and **unsafe**, so it can be used in either a REPL as a linear algebra or in a product as a library.
+* However, as TrixKit uses heavy reference semantics, it is not recommended at all in a produciton environment. I may update this in the future but let's be honest, it is probably not going to happen.
 
 In an attempt to keep all my math-related Swift under one roof, TrixKit also has some digital signal processing functions under the `DSP` namespace.
 
@@ -15,6 +16,7 @@ In an attempt to keep all my math-related Swift under one roof, TrixKit also has
         [7, 8, 9.0]
     ]) else {
         print("Malformed matrix.")
+        return
     }
     let b = [[9, 8, 7], [6, 5, 4], [3, 2, 1]].asMatrix //unsafe
 
@@ -68,20 +70,15 @@ In an attempt to keep all my math-related Swift under one roof, TrixKit also has
 ```
 
 # Requirements
-Swift 4.2. Tested on macOS, but should also be functional on Linux.
+Swift 4.2. Tested on macOS. Should theoretically be functional with other versions of Swift, however, I avoided all macOS-only code.
 
-## Installing Dependencies
+## Installing
 ### macOS
 Swift 4.2 is available with Xcode 10.
 
-### Debian-based OSes (incl. Ubuntu)
-Follow the installation instructions official version of Swift from https://swift.org.
-
-This will need a Swift package manager file but honestly, I'm entirely too lazy at this point. Sorry!
-
 # Usage
 ## macOS
-Build the library using Xcode, then invoke `swift -F <path>`, where the path is to a folder containing TrixKit.framework.
+Run `./install`. This will build and install TrixKit for your user and allow you to run it in the Terminal by writing trix, where it will run the Swift REPL for you. (You still have to `import TrixKit` though.)
 
 # License
 Apache 2.0. Check 'License'.

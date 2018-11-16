@@ -1,0 +1,6 @@
+#!/bin/sh
+xcodebuild
+mkdir -p ~/bin
+mkdir -p ~/bin/TrixKit
+echo "#!/bin/bash" > ~/bin/trix
+echo "swift -F ~/bin/TrixKit" >> ~/bin/trix
