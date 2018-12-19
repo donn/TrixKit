@@ -1,6 +1,14 @@
 #!/bin/sh
-xcodebuild
 mkdir -p ~/bin
 mkdir -p ~/bin/TrixKit
-echo "#!/bin/bash" > ~/bin/trix
+xcodebuild -configuration Release clean build "CONFIGURATION_BUILD_DIR=$HOME/bin/TrixKit"
+echo "#!/bin/sh" > ~/bin/trix
+echo "\
+if [ \"\$1\" == 'uninstall' ]; then\
+    rm -rf ~/bin/TrixKit;\
+    rm -rf ~/bin/trix;\
+    echo TrixKit uninstalled successfully.;\
+    exit 0;\
+fi" >> ~/bin/trix
 echo "swift -F ~/bin/TrixKit" >> ~/bin/trix
+chmod +x ~/bin/trix

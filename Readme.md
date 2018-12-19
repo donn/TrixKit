@@ -70,15 +70,24 @@ In an attempt to keep all my math-related Swift under one roof, TrixKit also has
 ```
 
 # Requirements
-Swift 4.2. Tested on macOS. Should theoretically be functional with other versions of Swift, however, I avoided all macOS-only code.
+Swift 4.2. Tested on macOS. Should theoretically be functional with other versions of Swift, however, as I avoided all macOS-only code.
 
-## Installing
 ### macOS
 Swift 4.2 is available with Xcode 10.
 
-# Usage
+
+# Installation
+Short version if you're into curling scripts without reading them: `curl https://raw.githubusercontent.com/donn/TrixKit/master/download | sh`.
+
+This will clone the repository, build TrixKit, copy a short script named trix to your user's `bin` folder, then delete the clone.
+
+To uninstall TrixKit, just invoke `trix uninstall` in the terminal.
+
+# Usage in the Terminal
 ## macOS
-Run `./install`. This will build and install TrixKit for your user and allow you to run it in the Terminal by writing trix, where it will run the Swift REPL for you. (You still have to `import TrixKit` though.)
+Run `trix`, then type `import TrixKit` then press return. You're ready to go.
+
+Still figuring out how to use it in Playgrounds. Why is it so messy?
 
 # License
 Apache 2.0. Check 'License'.

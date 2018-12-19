@@ -1,0 +1,5 @@
+git clone https://github.com/donn/TrixKit /tmp/TrixKit
+cd /tmp/TrixKit
+sh install
+cd /tmp
+rm -rf /tmp/TrixKit
