@@ -4,6 +4,8 @@ A matrix library written in Swift. I wrote this as a project for a linear algebr
 TrixKit tries to levarage two modes of operation, **safe** and **unsafe**, so it can be used in either a REPL as a linear algebra or in a product as a library.
 * However, as TrixKit uses heavy reference semantics, it is not recommended at all in a produciton environment. I may update this in the future but let's be honest, it is probably not going to happen.
 
+If you need an actual, production-ready Linear Algebra library for Swift: [LANumerics](https://github.com/phlegmaticprogrammer/LANumerics) looks extremely promising.
+
 In an attempt to keep all my math-related Swift under one roof, TrixKit also has some digital signal processing functions under the `DSP` namespace.
 
 # Examples
